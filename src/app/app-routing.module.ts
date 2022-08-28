@@ -13,7 +13,7 @@ const routes: Routes = [
   },
   { 
     path: 'more-info', 
-    loadChildren: () => import('./wrapper/wrapper.module').then(m => m.WrapperModule) 
+    loadChildren: () => import('./more-info/more-info.module').then(m => m.MoreInfoModule) 
   },
   
 ];

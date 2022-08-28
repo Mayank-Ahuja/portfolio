@@ -3,12 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
 import { ResumeComponent } from './resume/resume.component';
-import { WrapperComponent } from './wrapper.component';
+import { MoreInfoComponent } from './more-info.component';
 
 const routes: Routes = [
   {
      path: '', 
-     component: WrapperComponent,
+     component: MoreInfoComponent,
      children:[
       {
         path: 'about',
@@ -30,4 +30,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class WrapperRoutingModule { }
+export class MoreInfoRoutingModule { }
