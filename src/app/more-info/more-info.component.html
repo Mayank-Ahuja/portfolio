@@ -1,3 +1,18 @@
-<p>more-info works!</p>
 <app-navigation></app-navigation>
-<router-outlet></router-outlet>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-3 p-0 side-section">
+            <div class="portfolio-image"></div>
+            <div class="side-nav"></div>
+        </div>
+        <div class="col-12 col-sm-9 page-section">
+            <div class="page-name">
+                <app-page-header></app-page-header>
+            </div>
+            <div class="page-content px-3">
+                <router-outlet></router-outlet>
+            </div>
+        </div>
+    </div>
+</div>

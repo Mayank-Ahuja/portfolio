@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageHeaderService } from 'src/app/shared/page-header/page-header.service';
 
 @Component({
   selector: 'app-contact',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContactComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private pageHeader: PageHeaderService
+  ) { }
 
   ngOnInit(): void {
+    this.pageHeader.setPageHeaderName('Contact');
   }
 
 }

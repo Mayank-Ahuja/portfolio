@@ -11,7 +11,7 @@ const routes: Routes = [
      component: MoreInfoComponent,
      children:[
       {
-        path: 'about',
+        path: 'about-me',
         component: AboutComponent
       },
       {
