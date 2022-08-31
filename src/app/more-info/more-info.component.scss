@@ -1,5 +1,24 @@
 @import '../../assets/styles/variables';
 
+%side-nav-psuedo-classes {
+    position: absolute;
+    content: '';
+    display: inline-block;
+    left: 50%;
+    width: 0px;
+    height: 25px;
+    border-left: 1px dashed $black;
+}
+
+%side-nav-start-end-points {
+    width: 6px;
+    height: 6px;
+    bottom: calc(100% + 20px);
+    background-color: $black;
+    transform: translateX(-50%);
+    border: none;
+}
+
 .side-section {
     display: none;
     height: 100vh;
@@ -16,6 +35,63 @@
     .side-nav {
         height: 70vh;
         background-color: $primary-color;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: center;
+        list-style: none;
+        padding: 0px;
+
+        .nav-item {
+            margin: 15px 0;
+            position: relative;
+
+            a {
+                color: $black;
+                text-decoration: none;
+                font-size: 1.5em;
+                font-weight: 600;
+                font-family: $source-sans;
+                text-transform: uppercase;
+            }
+
+            &.active {
+                a {
+                    color: $white;
+                }
+            }
+
+            &::after {
+                @extend %side-nav-psuedo-classes;
+
+                top: 100%;
+            }
+
+            &:first-child {
+                &::before {
+                    @extend %side-nav-psuedo-classes;
+
+                    bottom: 100%;
+                }
+
+                a {
+                    &::before {
+                        @extend %side-nav-psuedo-classes;
+                        @extend %side-nav-start-end-points;
+                    }
+                }
+            }
+            &:last-child{
+                a{
+                    &::after{
+                        @extend %side-nav-psuedo-classes;
+                        @extend %side-nav-start-end-points;
+                        bottom: unset;
+                        top: calc(100% + 20px);
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -30,7 +106,7 @@
         display: block;
 
         .portfolio-image {
-            background-image: url('/assets/images/portfolio-image.jpg');
+            background-image: url($portfolio-image);
             filter: grayscale(100%);
             background-repeat: no-repeat;
             background-size: 100% 100%;
