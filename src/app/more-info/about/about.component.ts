@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PageHeaderService } from 'src/app/shared/page-header/page-header.service';
+import { AppDataService } from 'src/app/shared/services/app-data.service';
 
 @Component({
   selector: 'app-about',
@@ -9,7 +10,8 @@ import { PageHeaderService } from 'src/app/shared/page-header/page-header.servic
 export class AboutComponent implements OnInit {
 
   constructor(
-    private pageHeader: PageHeaderService
+    private pageHeader: PageHeaderService,
+    public appData: AppDataService
   ) { }
 
   ngOnInit(): void {
