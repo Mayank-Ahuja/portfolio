@@ -1,10 +1,15 @@
 @import '../../assets/styles/variables';
 
 .intro-section {
+    height: 100vh;
+
     .intro-image {
-        height: 100vh;
         background-image: url('/assets/images/portfolio-image.jpg');
         filter: grayscale(100%);
+        display: none;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        height: 100%;
     }
 
     p {
@@ -18,9 +23,11 @@
         line-height: 1.5;
         font-family: 'Noto Serif JP', serif;
         text-transform: uppercase;
+
         &.hi {
             font-size: 2.5em;
         }
+
         .name {
             color: $primary-color;
             font-family: 'Train One', cursive;
@@ -45,6 +52,7 @@
         justify-content: center;
         flex-flow: column nowrap;
         padding: 0 5vw 0 10vw;
+        height: 100%;
     }
 
     #know_more {
@@ -57,7 +65,8 @@
         border-radius: 20px;
         text-transform: uppercase;
     }
-    #intro{
+
+    #intro {
         font-family: 'Source Sans Pro', sans-serif;
         color: lighten($black, 40);
         font-size: 1em;
