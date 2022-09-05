@@ -4,6 +4,8 @@ import { initializeApp } from "firebase/app";
 import { getPerformance } from "firebase/performance";
 import { getAnalytics } from "firebase/analytics";
 
+import { environment } from 'src/environments/environment';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -23,9 +25,11 @@ export class AppComponent {
   };
 
   constructor() {
-    const app = initializeApp(this.firebaseConfig);
-    const analytics = getAnalytics(app);
-    const perf = getPerformance(app);
+    if(environment.production){
+      const app = initializeApp(this.firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
+    }
   }
 }
 
