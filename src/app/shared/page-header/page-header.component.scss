@@ -2,15 +2,24 @@
 
 .page-head {
     border: 1px dashed $black;
-    margin: 40px 0;
-    padding: 20px 0;
+    margin: 20px 0;
+    padding: 10px 0;
     text-align: center;
 
     p {
-        font-size: 4.5em;
+        font-size: 3.5em;
         font-weight: 600;
         text-transform: uppercase;
         font-family: $source-sans;
         margin: 0;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .page-head{
+        margin: 40px 0;
+        p{
+            font-size: 4.5em;
+        }
     }
 }

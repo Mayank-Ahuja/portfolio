@@ -22,7 +22,7 @@
 .side-section {
     display: none;
     height: 100vh;
-
+    width: 250px;
     .portfolio-image {
         height: 30vh;
 
@@ -97,11 +97,18 @@
 
 .page-section {
     height: 100vh;
+    width: 100vw;
     background-color: lighten($black, 85%);
-    padding: 0 10vw;
+    padding: 0 15px;
 }
 
 @media screen and (min-width: $sm) {
+    .page-section{
+        padding: 0 10vw;
+    }
+}
+
+@media screen and (min-width: $md) {
     .side-section {
         display: block;
 
@@ -111,5 +118,8 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
+    }
+    .page-section{
+        width: calc(100vw - 250px);
     }
 }

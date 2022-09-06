@@ -1,0 +1,66 @@
+@import '../../../assets/styles/variables';
+
+.contact-section {
+
+    .head,
+    .text {
+        color: lighten($black, 25%);
+        font-family: $source-sans;
+    }
+
+    .head {
+        font-size: 1.75em;
+        font-weight: 300;
+    }
+
+    .text {
+        font-weight: 200;
+        font-size: 1.05em;
+    }
+
+    .contact-icon {
+        text-align: center;
+        i {
+            font-size: 2.5em;
+            color: lighten($black, 25%);
+        }
+    }
+
+    .contact-data {
+        flex-flow: column;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        a {
+            color: lighten($black, 25%);
+            font-size: 0.9em;
+            font-weight: 400;
+            text-decoration: none;
+            text-transform: uppercase;
+            line-height: 1.75;
+        }
+    }
+    .thanks{
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.5em;
+        font-family: $source-sans;
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .contact-section {
+        .contact-icon {
+            i {
+                font-size: 5em;
+            }
+        }
+        .contact-data{
+            text-align: left;
+        }
+        .thanks{
+            font-size: 2.5em;
+        }
+    }
+}
