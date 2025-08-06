@@ -5,7 +5,23 @@
         <div class="col-sm-3 p-0 side-section">
             <div class="portfolio-image"></div>
             <ul class="side-nav">
-                <li class="nav-item" routerLinkActive="active">
+                <ng-container *ngIf="navLinks && navLinks.length > 0">
+                    <ng-container *ngFor="let link of navLinks">
+                        <ng-container *ngIf="link.isActive">
+
+                            <li class="nav-item" [routerLinkActive]="['active']">
+                                <a *ngIf="!link.isExternal" [routerLink]="link.route">
+                                    {{ link.name }}
+                                </a>
+                                <a *ngIf="link.isExternal" [href]="link.externalUrl" target="_blank">
+                                    {{ link.name }}
+                                </a>
+                            </li>
+                        </ng-container>
+                    </ng-container>
+                </ng-container>
+
+                <!-- <li class="nav-item" routerLinkActive="active">
                     <a routerLink="/home">Home</a>
                 </li>
                 <li class="nav-item" routerLinkActive="active">
@@ -16,7 +32,7 @@
                 </li>
                 <li class="nav-item" routerLinkActive="active">
                     <a routerLink="/more-info/contact">Contact</a>
-                </li>
+                </li> -->
             </ul>
         </div>
         <div class="col-12 page-section">

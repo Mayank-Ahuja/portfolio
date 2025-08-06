@@ -122,7 +122,7 @@ export const NAV_LINKS: ComponentType[] = [
         description: 'Read my latest articles and insights on web development and technology.',
         route: '',
         icon: 'bi bi-journal-text',
-        isActive: false,
+        isActive: true,
         order: 6,
         developerOnly: false,
         isExternal: true,

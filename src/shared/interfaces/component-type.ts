@@ -6,7 +6,7 @@ export interface ComponentType {
     isActive?: boolean; // Optional property to indicate if the component is active
     order?: number; // Optional property to define the order of components
     developerOnly?: boolean; // Optional property to indicate if the component is for developers only
-    isExternal?: boolean; // Optional property to indicate if the component is an external link
+    isExternal: boolean; // Optional property to indicate if the component is an external link
     externalUrl?: string; // Optional property for external URL if isExternal is true
     tags?: string[]; // Optional property for tags associated with the component
     additionalInfo?: string; // Optional property for any additional information
