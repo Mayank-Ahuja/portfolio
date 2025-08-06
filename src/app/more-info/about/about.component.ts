@@ -16,6 +16,9 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageHeader.setPageHeaderName('About Me');
+    this.appData.updateIntroContent();
   }
+
+  
 
 }
