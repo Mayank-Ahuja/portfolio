@@ -1,5 +1,5 @@
 <div class="main-nav">
-    <a routerLink="/home" routerLinkActive="active" class="nav-icon">
+    <!-- <a routerLink="/home" routerLinkActive="active" class="nav-icon">
         <i class="bi bi-house-fill"></i>
     </a>
     <a routerLink="/more-info/about-me" routerLinkActive="active" class="nav-icon">
@@ -10,5 +10,14 @@
     </a>
     <a routerLink="/more-info/contact" routerLinkActive="active" class="nav-icon">
         <i class="bi bi-send-fill"></i>
-    </a>
+    </a> -->
+    <ng-container *ngIf="navLinks && navLinks.length > 0">
+        <ng-container *ngFor="let link of navLinks">
+            <ng-container *ngIf="link.isActive">
+                <a [routerLink]="link.route" routerLinkActive="active" class="nav-icon">
+                    <i [class]="link.icon"></i>
+                </a>
+            </ng-container>
+        </ng-container>
+    </ng-container>
 </div>

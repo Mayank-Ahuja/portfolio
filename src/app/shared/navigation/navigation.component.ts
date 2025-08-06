@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NAV_LINKS } from 'src/shared/services/navigation-links';
 
 @Component({
   selector: 'app-navigation',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
+  navLinks = NAV_LINKS;
+  
   constructor() { }
 
   ngOnInit(): void {
