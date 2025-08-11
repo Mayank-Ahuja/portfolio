@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { PageHeaderService } from 'src/app/shared/page-header/page-header.service';
 import { AppDataService } from 'src/app/shared/services/app-data.service';
+import { ComponentType } from 'src/shared/interfaces/component-type';
+import { NAV_LINKS } from 'src/shared/services/navigation-links';
 
 @Component({
   selector: 'app-about',
@@ -8,6 +10,8 @@ import { AppDataService } from 'src/app/shared/services/app-data.service';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
+
+  componentInfo: ComponentType = NAV_LINKS[1]
 
   constructor(
     private pageHeader: PageHeaderService,
