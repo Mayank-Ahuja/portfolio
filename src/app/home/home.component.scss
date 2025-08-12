@@ -48,19 +48,14 @@
     }
 
     .intro-content {
-        // display: flex;
-        // justify-content: center;
-        // flex-flow: column nowrap;
-        // padding: 0 5vw 0 10vw;
-        // height: 100%;
         padding: 0 5vw 0 10vw;
-position: absolute;
-top: 50%;
-bottom: 0;
-height: fit-content;
-left: 0;
-right: 0;
-transform: translate(0, -50%);
+        position: absolute;
+        top: 50%;
+        bottom: 0;
+        height: fit-content;
+        left: 0;
+        right: 0;
+        transform: translate(0, -50%);
     }
 
     #know_more {
@@ -80,5 +75,18 @@ transform: translate(0, -50%);
         font-size: 1em;
         margin: 25px 0;
         padding: 0 50px 0 0;
+    }
+}
+
+@media screen and (min-width: $md) {
+    .intro-section {
+        .intro-content {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            flex-flow: column nowrap;
+            padding: 0 5vw 0 10vw;
+            height: 100%;
+        }
     }
 }
