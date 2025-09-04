@@ -11,7 +11,8 @@ import { NAV_LINKS } from 'src/shared/services/navigation-links';
 })
 export class AboutComponent implements OnInit {
 
-  componentInfo: ComponentType = NAV_LINKS[1]
+  componentInfo: ComponentType = NAV_LINKS[1];
+  workExperience: number = 0;
 
   constructor(
     private pageHeader: PageHeaderService,
@@ -20,7 +21,7 @@ export class AboutComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageHeader.setPageHeaderName('About Me');
-    this.appData.updateIntroContent();
+    this.workExperience = this.appData.updateIntroContent();
   }
 
   
