@@ -8,11 +8,16 @@ export class AppDataService {
   constructor() { }
 
   designation: string = 'Assistant Manager - Technology';
-  introContent: string = `I am a dynamic and results-driven Front End Tech Lead with $yrs of experience 
-  in web UI development, specialising in Angular frameworks within the BFSI domain. I possess expertise 
-  in architecting scalable and high-performance user interfaces for mission-critical applications, 
-  along with a strong ability to lead teams and mentor junior developers to deliver business-focused 
-  digital solutions.`;
+  subtitle: string = `Designing and developing visually appealing, responsive web interfaces that deliver 
+  intuitive, seamless digital experiences for users.`;
+  introContent: string = `
+  <p>I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend 
+  thoughtful design with robust engineering. My favorite work lies at the intersection of design and 
+  development, creating experiences that not only look great but are meticulously built for performance 
+  and usability.</p>
+  <p>Currently, I'm an Assistant Manager-Technology at <b class="company name">Decimal Technologies</b>, 
+  specialising in Frontend development delivering secure, scalable solutions and optimized 
+  workflows—ensuring compliance, accelerating delivery, and improving client outcomes.</p>`;
 
   updateIntroContent(): number {
     // updating the introContent dynamically

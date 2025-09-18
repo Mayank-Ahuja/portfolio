@@ -14,10 +14,10 @@
     <ng-container *ngIf="navLinks && navLinks.length > 0">
         <ng-container *ngFor="let link of navLinks">
             <ng-container *ngIf="link.isActive">
-                <a *ngIf="!link.isExternal" [routerLink]="link.route" routerLinkActive="active" class="nav-icon">
+                <a *ngIf="!link.isExternal" [routerLink]="link.route" [title]="link.name" routerLinkActive="active" class="nav-icon">
                     <i [class]="link.icon"></i>
                 </a>
-                <a *ngIf="link.isExternal" [href]="link.externalUrl" target="_blank" class="nav-icon">
+                <a *ngIf="link.isExternal" [href]="link.externalUrl" [title]="link.name" target="_blank" class="nav-icon">
                     <i [class]="link.icon"></i>
                 </a>
             </ng-container>

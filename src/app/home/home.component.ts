@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.appData.updateIntroContent();
+    // this.appData.updateIntroContent();
   }
 
 }
