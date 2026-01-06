@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
-// import { initializeApp } from "firebase/app";
-// import { getPerformance } from "firebase/performance";
-// import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "firebase/app";
+import { getPerformance } from "firebase/performance";
+import { getAnalytics } from "firebase/analytics";
 
 import { environment } from 'src/environments/environment';
 
@@ -26,9 +26,9 @@ export class AppComponent {
 
   constructor() {
     if(environment.production){
-      // const app = initializeApp(this.firebaseConfig);
-      // const analytics = getAnalytics(app);
-      // const perf = getPerformance(app);
+      const app = initializeApp(this.firebaseConfig);
+      const analytics = getAnalytics(app);
+      const perf = getPerformance(app);
     }
   }
 }
