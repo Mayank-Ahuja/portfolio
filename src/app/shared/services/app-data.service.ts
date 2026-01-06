@@ -11,13 +11,15 @@ export class AppDataService {
   subtitle: string = `Designing and developing visually appealing, responsive web interfaces that deliver 
   intuitive, seamless digital experiences for users.`;
   introContent: string = `
-  <p>I’m a developer passionate about crafting accessible, pixel-perfect user interfaces that blend 
-  thoughtful design with robust engineering. My favorite work lies at the intersection of design and 
-  development, creating experiences that not only look great but are meticulously built for performance 
-  and usability.</p>
-  <p>Currently, I'm an Assistant Manager-Technology at <b class="company name">Decimal Technologies</b>, 
-  specialising in Frontend development delivering secure, scalable solutions and optimized 
-  workflows—ensuring compliance, accelerating delivery, and improving client outcomes.</p>`;
+  <p>I’m a Technical Assistant Project Manager with 8+ years of experience leading Agile teams and delivering 
+  scalable digital platforms in the BFSI space. With a strong foundation in front-end engineering (Angular, 
+  modern web architectures), I bridge the gap between business vision and technical execution.</p>
+  <p>I’ve led cross-functional teams to deliver secure, high-impact solutions for large financial institutions, 
+  driving measurable outcomes such as faster delivery cycles, reduced production defects, and improved 
+  platform performance. My leadership style is hands-on and outcome-driven—I understand code, respect engineering 
+  realities, and focus on clarity, accountability, and execution.</p>
+  <p>I thrive in environments where strong technical leadership, stakeholder alignment, and disciplined 
+  delivery come together to build reliable, user-centric products at scale.</p>`;
 
   updateIntroContent(): number {
     // updating the introContent dynamically
